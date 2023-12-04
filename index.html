@@ -103,8 +103,6 @@
         border: none;
     }
 
-
-
     #jupiter-horoscope-form fieldset>label {
         font-size: 1.07em;
         white-space: nowrap;
@@ -129,11 +127,21 @@
         padding-top: 20px;
     }
 
+    #jupiter-input-container .h3 {
+        font-family: 'Cabin Regular';
+        font-size: 1.3em;
+        margin: 0 auto;
+        padding: 0;
+        font-weight: 200;
+        color: #f4954e;
+        width: 100%;
+    }
+
     #jupiter-input-container p {
         font-size: 1em;
-        margin: 1em 1em auto;
+        margin: 0.6em 1em auto;
         line-height: 30px;
-        width: 89%;
+        width: 90%;
     }
 
     .jupiter-inputs-container input,
@@ -396,7 +404,7 @@
     }
 
     .jupiter-result-boxes .jupiter-result-para {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     #jupiter-result .mars-desc {
@@ -432,7 +440,7 @@
     }
 
     #jupiter-result-container .mars-desc {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     #jupiter-result-container>p {
@@ -611,6 +619,10 @@
             padding-top: 5px;
         }
 
+        #jupiter-input-container .h3 { 
+            font-size: 1em; 
+        }
+
         #jupiter-horoscope-form {
             margin-top: 1em;
         }
@@ -650,12 +662,16 @@
         <!--------------------------------- First Page End ---------------------------------->
         <div id="jupiter-input-container" class="">
             <img src="infographics/images/PS-logo.png" width="280px">
-            <h2 class="h1">Mars Sign Calculator</h2>
+            <h2 class="h1">Jupiter Sign Calculator</h2>
             <img src="infographics/images/line.svg" width="90%">
-            <p>The position of Mars in your astrological chart yields valuable information about your
-                most primal nature. Mars impacts your sexuality, assertiveness, energy levels, willpower, and how you
-                deal with anger. Learning more about your Mars sign will help you align your intentions with your innate
-                nature so you can fully manifest your desires.
+            <h3 class="h3">How Does Jupiter Work in Your Chart? </h3>
+            <p>Jupiter's position on your natal chart has a huge impact on how you approach life. Understanding what
+                sign Jupiter is in provides insights into how you attract abundance, approach challenges, and see the
+                world around you. Use this calculator to find out where Jupiter lands for you.
+            </p>
+            <p>Jupiter is more than twice the size of all the other planets in our solar system combined. This gives
+                it immense influence over your life. The position of Jupiter at the time of your birth determines how
+                you approach risks, attract abundance, learn lessons, and achieve success.
             </p>
             <form id="jupiter-horoscope-form" data-gtm-form-interact-id="0">
                 <fieldset id="jupiter-birth_date"><label for="jupiter-birth_date">Birth Date:</label>
@@ -958,7 +974,7 @@
                     <h2 class="h2" id="mars-sign">Mars in Aries</h2>
                     <p class="jupiter-result-para" id="strengths">To best understand your Jupiter sign, you should also
                         explore the other planets in your chart. Speak with an astrology psychic for a full reading that
-                        reveals more about Jupiter's expansive influence in your life. 
+                        reveals more about Jupiter's expansive influence in your life.
                     </p>
                 </div>
 
@@ -974,14 +990,12 @@
                 you give to the world</p> -->
             <!---------- jupiter Description ----------->
 
-            <p class="mars-desc">Mars is just one of the many planets that influences your astrological chart .Learn
-                more about what sign
-                your other planets fall into see how all these puzzle pieces come together in
-                your unique one-of-a-kind self.
+            <p class="mars-desc">To best understand your Jupiter sign, you should also explore the other planets in your chart. Speak with an astrology psychic for a full reading that reveals more about Jupiter's expansive influence in your life.
+
             </p>
 
             <div id="jupiter-jump-btn">
-                <a href="#" id="jumplink"><button id="button-jumplink">Speak with a psychic astrologer to learn more
+                <a href="#" id="jumplink"><button id="button-jumplink">Speak with an astrology psychic
                     </button></a>
             </div>
             <div id="jupiter-retry">
@@ -994,7 +1008,7 @@
  </p> -->
             <!-- <div id="jupiter-divider"><img src="infographics/images/line.svg" alt="------" loading="lazy">
  </div> -->
-            <img src="infographics/images/line.svg" width="87%">
+            <img src="infographics/images/output-line.svg" width="65%">
 
             <div id="jupiter-resources">
                 <h4>
@@ -1013,11 +1027,10 @@
                         https://cafeastrology.com/natal/jupiterinsigns.html
                     </a>
                     <br>
-                    <a href="https://www.yourtango.com/zodiac/jupiter-sign-meaning-astrology"
-                        target="_blank">
+                    <a href="https://www.yourtango.com/zodiac/jupiter-sign-meaning-astrology" target="_blank">
                         https://www.yourtango.com/zodiac/jupiter-sign-meaning-astrology
                     </a>
-                     
+
                 </div>
             </div>
         </div>
@@ -1220,7 +1233,7 @@
         // place_id: Number
 
         const horoscope = await getNatalHoroscope(name, date, time, place_id); //fetch jupiter Details from Database
-        const jupiterSign = horoscope.planets[4].signName;
+        const jupiterSign = horoscope.planets[5].signName;
 
         /****** Find House details ******/
         // const jupiterSignId = horoscope.ascendant.signId;
